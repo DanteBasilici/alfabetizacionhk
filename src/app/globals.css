@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hk-blue: #0ea5e9;
+  --color-hk-yellow: #facc15;
+  --color-hk-red: #ef4444;
+}
+
+@layer base {
+  :root {
+    /* Modo Claro (Fondo hueso, tarjetas gris oscuro) */
+    --background: #F9F6EE; 
+    --foreground: #18181b; 
+    --card: #27272a;       
+    --card-foreground: #ffffff; /* Texto blanco sobre las tarjetas grises */
+  }
+
+.dark {
+    /* Modo Oscuro extremo para que se diferencie la tarjeta del fondo */
+    --background: #000000; /* Negro puro para el fondo de la app */
+    --foreground: #f4f4f5; 
+    --card: #27272a;       /* Gris Zinc (bastante claro) para las tarjetas */
+    --card-foreground: #ffffff; 
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
